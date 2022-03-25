@@ -27,6 +27,5 @@ class ListScreen extends StatelessWidget {
         ),
       ],
     );
-    );
   }
 }
