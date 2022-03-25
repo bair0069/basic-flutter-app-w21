@@ -18,6 +18,46 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen());
+    return MaterialApp(
+      home: MainPage(),
+      );
+  }
+}
+
+class MainPage extends StatefulWidget {
+  const MainPage({ Key? key }) : super(key: key);
+
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  int currentIndex = 0;
+
+  String currentPage = 'home';
+
+  final Map<String,Widget> routes = {
+    'home': HomeScreen(),
+    'list': ListScreen(),
+    'logo': LogoScreen(),
+  };
+
+  final List<Widget> screens =<Widget>[
+    HomeScreen(),
+    ListScreen(),
+    LogoScreen(),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      bottomNavigationBar: Nav( 
+        currentIndex: currentIndex,
+        onTapped: (int index){
+          setState(() {
+            currentIndex = index;
+          });
+        },
+        ),
+    );
   }
 }

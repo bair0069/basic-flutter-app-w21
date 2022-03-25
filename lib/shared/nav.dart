@@ -5,17 +5,38 @@
 import 'package:flutter/material.dart';
 
 class Nav extends StatefulWidget {
-  const nav({ Key? key }) : super(key: key);
+  Nav({Key? key, this.currentIndex = 0, required this.onTapped}) : super(key: key);
+  int currentIndex;
+  final Function(int) onTapped;
 
+  final labels = ['Home', 'List', 'Logo'];
+  final icons = [
+    Icons.home,
+    Icons.list,
+    Icons.account_circle,
+  ];
   @override
-  State<nav> createState() => _navState();
+  State<Nav> createState() => _NavState();
 }
 
-class _navState extends State<nav> {
+class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      showUnselectedLabels: true,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.grey,
+      iconSize: 30,
+      currentIndex: widget.currentIndex,
+      items: [
+        for (var i = 0 ; i < widget.labels.length; i++)
+          BottomNavigationBarItem(
+            icon: Icon(widget.icons[i]),
+            label: widget.labels[i],
+          ),
+      ],
+      onTap: (int index){widget.onTapped(index);},
     );
   }
 }

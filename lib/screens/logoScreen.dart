@@ -1,5 +1,6 @@
 /*TODO:
--Needs to show a flutter logo and text centered on the screen. Text needs to show my name
+*Needs to show a flutter logo 
+*and text centered on the screen. Text needs to show my name
 */
 
 import 'package:flutter/material.dart';
@@ -9,6 +10,16 @@ class LogoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Center(
+        child: Text(
+          'Kiefer Baird-Perry',
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
   }
 }
