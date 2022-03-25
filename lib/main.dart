@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import './screens/homeScreen.dart';
-import './screens/listScreen.dart';
-import './screens/logoScreen.dart';
+import 'screens/list_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/logo_screen.dart';
 import './shared/nav.dart';
 
+// ignore: todo
 /*TODO:
 - Routes need to be defined in main.dart
 ****colours need to pass accessibility checks.****
@@ -18,14 +19,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MainPage(),
-      );
+    );
   }
 }
 
 class MainPage extends StatefulWidget {
-  const MainPage({ Key? key }) : super(key: key);
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -36,28 +37,28 @@ class _MainPageState extends State<MainPage> {
 
   String currentPage = 'home';
 
-  final Map<String,Widget> routes = {
-    'home': HomeScreen(),
-    'list': ListScreen(),
-    'logo': LogoScreen(),
+  final Map<String, Widget> routes = {
+    'home': const HomeScreen(),
+    'list': const ListScreen(),
+    'logo': const LogoScreen(),
   };
 
-  final List<Widget> screens =<Widget>[
-    HomeScreen(),
-    ListScreen(),
-    LogoScreen(),
+  final List<Widget> screens = <Widget>[
+    const HomeScreen(),
+    const ListScreen(),
+    const LogoScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Nav( 
+      bottomNavigationBar: Nav(
         currentIndex: currentIndex,
-        onTapped: (int index){
+        onTapped: (int index) {
           setState(() {
             currentIndex = index;
           });
         },
-        ),
+      ),
     );
   }
 }

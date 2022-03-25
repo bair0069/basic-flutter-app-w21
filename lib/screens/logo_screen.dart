@@ -1,4 +1,6 @@
-/*TODO:
+
+/*
+TODO:
 *Needs to show a flutter logo 
 *and text centered on the screen. Text needs to show my name
 */
@@ -10,14 +12,12 @@ class LogoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          'Kiefer Baird-Perry',
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 30,
-          ),
+    return const Center(
+      child: Text(
+        'Kiefer Baird-Perry',
+        style: TextStyle(
+          color: Colors.green,
+          fontSize: 30,
         ),
       ),
     );
