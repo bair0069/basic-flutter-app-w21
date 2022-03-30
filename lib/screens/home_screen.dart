@@ -3,9 +3,6 @@
         -2 cards
 - Cards  contain :
         -AssetImage
-        child: Image(
-        image: AssetImage('assets/images/flutter.png'),
-        fit: BoxFit.contain,
       )
         -Text widget
 */
@@ -17,23 +14,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const <Widget>[
-        Card(
-          shadowColor: Colors.black12,
-          child: Image(
-            image: AssetImage('assets/images/flutter.png'),
-            fit: BoxFit.contain,
-          ),
-        ),
-        Card(
-          shadowColor: Colors.black12,
-          child:Image(
-            image: AssetImage('assets/images/flutter.png'),
-            fit: BoxFit.contain,
-          ),
-        ),
-      ],
-    );
+    return Column(children: [
+      Card(
+        child: Column(children: [
+          Image.asset('assets/images/flutter.png'),
+          Text('Image 1'),
+        ]),
+      ),
+      Card(
+        child: Column(children: [
+          Image.asset('assets/images/flutter.png'),
+          Text('Image 2'),
+        ]),
+      )
+    ]);
   }
 }

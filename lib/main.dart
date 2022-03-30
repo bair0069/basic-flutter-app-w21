@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/list_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/logo_screen.dart';
-import './shared/nav.dart';
+import 'package:kiefer_baird_perry_310_ex5/screens/list_screen.dart';
+import 'package:kiefer_baird_perry_310_ex5/screens/home_screen.dart';
+import 'package:kiefer_baird_perry_310_ex5/screens/logo_screen.dart';
+import 'package:kiefer_baird_perry_310_ex5/shared/nav.dart';
 
 // ignore: todo
 /*TODO:
@@ -54,11 +54,11 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Nav(
         currentIndex: currentIndex,
         onTapped: (int index) {
-          setState(() {
-            currentIndex = index;
-          });
+          print(index);
+          setState(() => currentIndex = index);
         },
       ),
+      body: screens[currentIndex],
     );
   }
 }
