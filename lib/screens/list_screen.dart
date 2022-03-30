@@ -1,9 +1,4 @@
 
-/*TODO:
--ListView
--3 listTile widgets
-*/
-
 import 'package:flutter/material.dart';
 
 class ListScreen extends StatelessWidget {

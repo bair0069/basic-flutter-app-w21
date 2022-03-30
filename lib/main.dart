@@ -4,12 +4,6 @@ import 'package:kiefer_baird_perry_310_ex5/screens/home_screen.dart';
 import 'package:kiefer_baird_perry_310_ex5/screens/logo_screen.dart';
 import 'package:kiefer_baird_perry_310_ex5/shared/nav.dart';
 
-// ignore: todo
-/*TODO:
-- Routes need to be defined in main.dart
-****colours need to pass accessibility checks.****
-*/
-
 void main() {
   runApp(const MyApp());
 }
@@ -54,7 +48,6 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Nav(
         currentIndex: currentIndex,
         onTapped: (int index) {
-          print(index);
           setState(() => currentIndex = index);
         },
       ),

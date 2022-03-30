@@ -1,8 +1,3 @@
-/*
-TODO:
-*Needs to show a flutter logo 
-*and text centered on the screen. Text needs to show my name
-*/
 
 import 'package:flutter/material.dart';
 
@@ -15,12 +10,12 @@ class LogoScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center
           ,
-      children: const [
+      children: const <Widget> [
         Text(
           'Kiefer Baird-Perry',
           style: TextStyle(
-              color: Colors.green,
-              fontSize: 30,
+              color: Colors.deepPurple,
+              fontSize: 35,
             ),
           ),
           FlutterLogo(size: 80),

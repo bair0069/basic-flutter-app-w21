@@ -1,11 +1,3 @@
-/*TODO:
--Column that contains: 
-        -2 cards
-- Cards  contain :
-        -AssetImage
-      )
-        -Text widget
-*/
 
 import 'package:flutter/material.dart';
 
@@ -14,17 +6,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(children: <Widget> [
       Card(
-        child: Column(children: [
-          Image.asset('assets/images/flutter.png'),
-          Text('Image 1'),
+        child: Column(children: <Widget> [
+          Image.asset('assets/images/flutter.png',
+          fit: BoxFit.contain,
+          ),
+          const Text('Image 1'),
         ]),
       ),
       Card(
-        child: Column(children: [
-          Image.asset('assets/images/flutter.png'),
-          Text('Image 2'),
+        child: Column(children: <Widget> [
+          Image.asset('assets/images/flutter.png',
+          fit:BoxFit.contain),
+          const Text('Image 2'),
         ]),
       )
     ]);
