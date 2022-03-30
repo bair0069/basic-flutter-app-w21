@@ -1,4 +1,3 @@
-
 /*
 TODO:
 *Needs to show a flutter logo 
@@ -12,18 +11,21 @@ class LogoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children:[ Text(
-        'Kiefer Baird-Perry',
-        style: TextStyle(
-          color: Colors.green,
-          fontSize: 30,
-        ),
-      ),
-        FlutterLogo(
-          
-        ),
-      ]
+    return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center
+          ,
+      children: const [
+        Text(
+          'Kiefer Baird-Perry',
+          style: TextStyle(
+              color: Colors.green,
+              fontSize: 30,
+            ),
+          ),
+          FlutterLogo(size: 80),
+        ],
+      )
     );
   }
 }
