@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,19 +5,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget> [
+    return Column(children: <Widget>[
       Card(
-        child: Column(children: <Widget> [
-          Image.asset('assets/images/flutter.png',
-          fit: BoxFit.contain,
-          ),
+        child: Column(children: <Widget>[
+          Image(
+              image: AssetImage('assets/images/flutter.png'),
+              fit: BoxFit.contain),
           const Text('Image 1'),
         ]),
       ),
       Card(
-        child: Column(children: <Widget> [
-          Image.asset('assets/images/flutter.png',
-          fit:BoxFit.contain),
+        child: Column(children: <Widget>[
+          Image(
+              image: AssetImage('assets/images/flutter.png'),
+              fit: BoxFit.contain),
           const Text('Image 2'),
         ]),
       )
